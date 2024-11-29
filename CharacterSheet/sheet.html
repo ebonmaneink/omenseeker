@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Omens Character Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <header>
+          <h1>Light Omens Character Sheet</h1>
+          <button id="toggle-theme">Toggle Light/Dark Mode</button>
+        </header>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+          <ul>
+            <li><a href="#general-info">General Info</a></li>
+            <li><a href="#roleplaying-info">Roleplaying Info</a></li>
+            <li><a href="#core-stats">Core Stats</a></li>
+            <li><a href="#specialties">Specialties</a></li>
+            <li><a href="#additional-stats">Additional Stats</a></li>
+            <li><a href="#expanded-truths">Extra Details</a></li>
+          </ul>
+        </nav>
+
+        <section class="info-grid">
+          <!-- General Information -->
+          <section aria-labelledby="general-info">
+            <h2 id="general-info">General Info</h2>
+            <form>
+              <div class="grid">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" />
+
+                <label for="origin">Origin</label>
+                <input type="text" id="origin" placeholder="Enter Origin" />
+
+                <label for="archetype">Archetype</label>
+                <input
+                  type="text"
+                  id="archetype"
+                  placeholder="Enter Archetype"
+                />
+
+                <label for="tendency">Tendency</label>
+                <input type="text" id="tendency" placeholder="Enter Tendency" />
+
+                <label for="technique">Technique Level</label>
+                <input
+                  type="number"
+                  id="technique"
+                  min="0"
+                  max="6"
+                  placeholder="Enter Technique Level"
+                />
+              </div>
+            </form>
+          </section>
+
+          <!-- Roleplaying Information -->
+          <section aria-labelledby="roleplaying-info">
+            <h2 id="roleplaying-info">Roleplaying Information</h2>
+            <form>
+              <div class="grid">
+                <label for="stGoals">Short Term Goals</label>
+                <input
+                  type="text"
+                  id="stGoals"
+                  maxlength="63"
+                  placeholder="Enter Short Term Goals"
+                />
+
+                <label for="ltGoals">Long Term Goals</label>
+                <input
+                  type="text"
+                  id="ltGoals"
+                  maxlength="63"
+                  placeholder="Enter Long Term Goals"
+                />
+
+                <label for="archGoals">Archetype Goals</label>
+                <input
+                  type="text"
+                  id="archGoals"
+                  maxlength="63"
+                  placeholder="Enter Archetype Goals"
+                />
+
+                <label for="tendency_drive">Tendency Drive</label>
+                <input
+                  type="text"
+                  id="tendency_drive"
+                  maxlength="63"
+                  placeholder="Enter Tendency Drive"
+                />
+
+                <label for="tendency_flaw">Tendency Flaw</label>
+                <input
+                  type="text"
+                  id="tendency_flaw"
+                  maxlength="63"
+                  placeholder="Enter Tendency Flaw"
+                />
+              </div>
+            </form>
+          </section>
+        </section>
+
+        <!-- Core Statistics -->
+        <section aria-labelledby="core-stats">
+          <h2 id="core-stats">Core Stats</h2>
+          <form class="core-stats-grid">
+            <!-- Attributes Section -->
+            <fieldset>
+              <legend>Attributes</legend>
+              <div>
+                <label for="body">Body</label>
+                <input
+                  type="number"
+                  id="body"
+                  min="1"
+                  max="4"
+                  placeholder="Physical Attribute"
+                />
+
+                <label for="mind">Mind</label>
+                <input
+                  type="number"
+                  id="mind"
+                  min="1"
+                  max="4"
+                  placeholder="Mental Attribute"
+                />
+
+                <label for="soul">Soul</label>
+                <input
+                  type="number"
+                  id="soul"
+                  min="1"
+                  max="4"
+                  placeholder="Spiritual Attribute"
+                />
+              </div>
+            </fieldset>
+
+            <!-- Approaches Section -->
+            <fieldset>
+              <legend>Approaches</legend>
+              <div>
+                <label for="force">Force</label>
+                <input
+                  type="number"
+                  id="force"
+                  min="0"
+                  max="6"
+                  placeholder="Direct Approach"
+                />
+
+                <label for="finesse">Finesse</label>
+                <input
+                  type="number"
+                  id="finesse"
+                  min="0"
+                  max="6"
+                  placeholder="Indirect Approach"
+                />
+
+                <label for="focus">Focus</label>
+                <input
+                  type="number"
+                  id="focus"
+                  min="0"
+                  max="6"
+                  placeholder="Resilience Approach"
+                />
+              </div>
+            </fieldset>
+          </form>
+        </section>
+
+        <!-- Specialties -->
+        <section aria-labelledby="specialties">
+          <h2 id="specialties">Specialties</h2>
+          <div class="specialty-grid">
+            <!-- Top Row -->
+            <div>
+              <h3>Brutal (Body + Force)</h3>
+              <input
+                type="number"
+                id="brutal"
+                min="0"
+                max="10"
+                placeholder="Strength Specialty"
+              />
+              <label>Strength Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Rational (Mind + Force)</h3>
+              <input
+                type="number"
+                id="rational"
+                min="0"
+                max="10"
+                placeholder="Intelligence Specialty"
+              />
+              <label>Intelligence Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Candid (Soul + Force)</h3>
+              <input
+                type="number"
+                id="candid"
+                min="0"
+                max="10"
+                placeholder="Sincerity Specialty"
+              />
+              <label>Sincerity Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+
+            <!-- Middle Row -->
+            <div>
+              <h3>Nimble (Body + Finesse)</h3>
+              <input
+                type="number"
+                id="nimble"
+                min="0"
+                max="10"
+                placeholder="Dexterity Specialty"
+              />
+              <label>Dexterity Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Insightful (Mind + Finesse)</h3>
+              <input
+                type="number"
+                id="insightful"
+                min="0"
+                max="10"
+                placeholder="Wisdom Specialty"
+              />
+              <label>Wisdom Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Tactful (Soul + Finesse)</h3>
+              <input
+                type="number"
+                id="tactful"
+                min="0"
+                max="10"
+                placeholder="Influence Specialty"
+              />
+              <label>Influence Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div>
+              <h3>Durable (Body + Focus)</h3>
+              <input
+                type="number"
+                id="durable"
+                min="0"
+                max="10"
+                placeholder="Resilience Specialty"
+              />
+              <label>Resilience Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Deliberate (Mind + Focus)</h3>
+              <input
+                type="number"
+                id="deliberate"
+                min="0"
+                max="10"
+                placeholder="Concentration Specialty"
+              />
+              <label>Concentration Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <h3>Tranquil (Soul + Focus)</h3>
+              <input
+                type="number"
+                id="tranquil"
+                min="0"
+                max="10"
+                placeholder="Resolve Specialty"
+              />
+              <label>Resolve Ranks</label>
+              <div class="checkbox-row">
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+                <input type="checkbox" /><input type="checkbox" /><input
+                  type="checkbox"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <!-- Additional Statistics -->
+          <section aria-labelledby="additional-stats">
+            <h2 id="additional-stats">Additional Stats</h2>
+            <form>
+              <div class="grid">
+                <label for="setHope">Current Hope</label>
+                <input
+                  type="number"
+                  id="setHope"
+                  min="0"
+                  placeholder="Remaining Hope"
+                />
+
+                <label for="maxHope">Maximum Hope</label>
+                <input
+                  type="number"
+                  id="maxHope"
+                  min="1"
+                  placeholder="Maximum Hope"
+                />
+
+                <label for="setResources">Current Resources</label>
+                <input
+                  type="number"
+                  id="setResources"
+                  min="0"
+                  placeholder="Remaining Resources"
+                />
+
+                <label for="baseResources">Baseline Resources</label>
+                <input
+                  type="number"
+                  id="baseResources"
+                  min="2"
+                  placeholder="Baseline Resources"
+                />
+
+                <label for="setExperience">Current Experience</label>
+                <input
+                  type="number"
+                  id="setExperience"
+                  min="0"
+                  placeholder="Remaining Experience"
+                />
+
+                <label for="totalExperience">Total Experience</label>
+                <input
+                  type="number"
+                  id="totalExperience"
+                  min="0"
+                  placeholder="Total Experience"
+                />
+              </div>
+            </form>
+          </section>
+
+          <!-- Expanded Truths -->
+          <section aria-labelledby="expanded-truths">
+            <h2 id="expanded-truths">Extra Details</h2>
+            <form>
+              <div class="grid">
+                <label for="talents">Talents</label>
+                <input type="text" id="talents" placeholder="Enter Talents" />
+
+                <label for="weapon">Weapon</label>
+                <input type="text" id="weapon" placeholder="Enter Weapon" />
+
+                <label for="armor">Armor</label>
+                <input type="text" id="armor" placeholder="Enter Armor" />
+
+                <label for="gear">Gear</label>
+                <input type="text" id="gear" placeholder="Enter Gear" />
+
+                <label for="wealth">Wealth</label>
+                <input
+                  type="number"
+                  id="wealth"
+                  min="0"
+                  placeholder="Enter Wealth"
+                />
+              </div>
+            </form>
+          </section>
+        </section>
+
+        <!-- Save Button -->
+        <div class="action-buttons">
+          <button id="save-sheet">Save Sheet</button>
+        </div>
+      </section>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: var(--input-bg);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  justify-content: center; /* Centers items horizontally */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0.5rem; /* Adds spacing around list items */
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+.navbar a:hover {
+  color: var(--highlight);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stacks navigation items vertically */
+    align-items: center;
+    gap: 0.5rem; /* Adds spacing between items */
+  }
+
+  .navbar a {
+    width: 100%; /* Makes each link span the full width for easier tapping */
+    text-align: center; /* Centers the text */
+  }
+}
+
+/* Base Theme Variables */
+:root {
+  --bg-color: #2a2d34;
+  --text-color: #ffffff;
+  --input-bg: #3b3f4a;
+  --input-border: #52565e;
+  --highlight: #88c0d0;
+  --button-bg: #6166b3;
+  --button-hover: #5158a0;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #2a2d34;
+  --input-bg: #e8e8e8;
+  --input-border: #cccccc;
+  --highlight: #007acc;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.4;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Grids */
+.grid,
+.stats-grid,
+.info-grid,
+.specialty-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats-grid,
+.info-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.specialty-grid {
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: hidden;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  color: var(--text-color);
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--highlight);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .specialty-grid {
+    grid-template-columns: 1fr;
+  }
+}
